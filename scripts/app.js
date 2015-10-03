@@ -10,7 +10,7 @@ app.config(function($routeProvider) {
             controller: 'AboutController',
             templateUrl: 'templates/about.html'
         })
-        .when('/recrutement', {
+        .when('/recruitement', {
             controller: 'RecruitementController',
             templateUrl: 'templates/recruitement.html'
         })
@@ -30,3 +30,26 @@ app.config(function($routeProvider) {
         ;
 });
 
+app.controller('AppController', ['$scope', function($scope){
+    console.log('AppController');
+}]);
+
+app.controller('AboutController', ['$scope', function($scope){
+    console.log('AboutController');
+}]);
+
+app.controller('RecruitementController', ['$scope', function($scope){
+    console.log('RecruitementController');
+}]);
+
+app.controller('QuotationController', ['$scope', function($scope){
+    console.log('QuotationController');
+}]);
+
+app.controller('ContactController', ['$scope', function($scope){
+    console.log('ContactController');
+}]);
+
+app.controller('NotFoundController', ['$scope', function($scope){
+    console.log('NotFoundController');
+}]);

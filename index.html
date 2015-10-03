@@ -26,7 +26,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="#/home">Accueil</a></li>
+              <li><a href="#/">Accueil</a></li>
               <li><a href="#/about">A propos</a></li>
               <li><a href="#/recruitement">Recrutement</a></li>
               <li><a href="#/quotation">Demande de devis</a></li>
@@ -36,6 +36,12 @@
         </div>
       </nav>
     </header>
+
+    <div class="row-fluid">
+      <main class="container-fluid">
+        <ng-view></ng-view>
+      </main>
+    </div>
     <!-- End Page Content -->
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-route.min.js"></script>
