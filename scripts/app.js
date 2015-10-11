@@ -26,6 +26,10 @@ app.config(function($routeProvider) {
             controller: 'NotFoundController',
             templateUrl: 'templates/404.html'
         })
+        .when('/test', {
+            controller: 'TestController',
+            templateUrl: 'templates/test.html'
+        })
         .otherwise({redirectTo: '/404'})
         ;
 });
@@ -52,4 +56,24 @@ app.controller('ContactController', ['$scope', function($scope){
 
 app.controller('NotFoundController', ['$scope', function($scope){
     console.log('NotFoundController');
+}]);
+
+app.controller('TestController', ['$scope', function($scope){
+    console.log('TestController');
+
+    $scope.who = ' la famille';
+    $scope.what = ' bien ';
+}]);
+
+app.controller('ChildController', ['$scope', function($scope){
+    console.log('ChildController');
+
+    $scope.what = ' bien ou bien ';
+}]);
+
+app.controller('GrandChildController', ['$scope', function($scope){
+    console.log('GrandChildController');
+
+    $scope.who = ' cousine';
+    $scope.what = ' bien ou quoi ';
 }]);
