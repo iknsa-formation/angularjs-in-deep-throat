@@ -4,7 +4,7 @@
       <div ng-init="user = {name: 'Alfred', email: 'alfred@hitchcock.conne'}"></div>
       <div class="form-group">
         <label for="name">Name</label>
-        <input class="form-control" type="text" ng-model="user.name" name="name" required="">
+        <input class="form-control" type="text" ng-model="user.name" name="name" required=""ng-model-options="{ updateOn: 'default blur', debounce: { default: 1500, blur: 0 } }">
         <div ng-show="form.$submitted || form.name.$touched">
           <p ng-show="form.name.$error.required">
             Whats your name duuude!!!
@@ -26,4 +26,3 @@
     <pre>{{user}}</pre>
   </div>
 </div>
-
