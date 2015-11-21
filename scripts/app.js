@@ -45,17 +45,12 @@ app.controller('QuotationController', ['$scope', function($scope){
     console.log('QuotationController');
 }]);
 
-app.controller('ContactController', ['$scope', '$locale', function($scope, $locale){
-    var contactType = JSON.parse(window.localStorage.getItem('contactType'));
-
+app.controller('ContactController', ['$scope', function($scope){
     $scope.contactSubmit = function() {
         var savedData = JSON.parse(window.localStorage.getItem('contactData'));
 
         if(savedData === null) {
             savedData = [];
-            var index = 0;
-        } else {
-            var index = savedData.length;
         }
 
         if($scope.tnc === undefined) {

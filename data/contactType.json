@@ -1,0 +1,28 @@
+{
+    "method": "post",
+    "name":{
+        "type": "text",
+        "required": "true",
+        "maxLength": 15,
+        "label": "Name",
+        "placeholder": "Name"
+    },
+    "email":{
+        "type": "text",
+        "required": "true",
+        "maxLength": 15,
+        "label": "Email",
+        "placeholder": "john@doe.com"
+    },
+    "message":{
+        "type": "textarea",
+        "required": "true",
+        "maxLength": 30,
+        "label": "Message"
+    },
+    "tnc":{
+        "type": "checkbox",
+        "required": "false",
+        "label": "Terms and Conditions"
+    }
+}
